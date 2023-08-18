@@ -9,7 +9,7 @@
   <body class="h-full bg-white dark:bg-gray-800">
     <div class="flex h-full flex-col overflow-auto">
       <div class="sticky top-0 bg-lime-600 py-3">
-        <div class="container mx-auto">
+        <div class="container">
           <div class="flex items-center justify-between">
             <div class="flex shrink-0 uppercase text-white">logo</div>
 
@@ -39,16 +39,21 @@
         </div>
       </div>
 
-      <div class="container mx-auto">
+      <div class="container">
         <h1 class="mb-5 text-4xl text-black dark:text-white">Lorem ipsum dolor, sit amet.</h1>
 
         <button class="app-c-btn app-c-btn--primary switch-theme">Switch theme</button>
         <button class="app-c-btn app-c-btn--secondary">Button</button>
+
+        <div class="flex flex-col gap-x-8 md:flex-row">
+          <aside class="order-2 mt-5 w-1/4 flex-shrink-0 bg-yellow-300 md:order-1">Sidebar</aside>
+          <section class="order-1 mt-5 w-full bg-red-400 md:order-2">Content</section>
+        </div>
       </div>
 
       <div class="mt-auto">
         <div class="bg-slate-500 py-3">
-          <div class="container mx-auto">
+          <div class="container">
             <div class="flex items-center justify-between">
               <div class="flex shrink-0 uppercase text-white">logo</div>
 
