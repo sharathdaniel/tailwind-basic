@@ -4,5 +4,7 @@
   "useTabs": false,
   "bracketSpacing": true,
   "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "singleQuote": false,
   "plugins": ["prettier-plugin-tailwindcss"]
 }
