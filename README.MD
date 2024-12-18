@@ -1,6 +1,6 @@
-Tailwind css watch command
+Tailwind Commands
 ==========================
 
-`npm install tailwindcss@next @tailwindcss/cli@next`
+Install: `npm install tailwindcss@next @tailwindcss/cli@next`
 
-`npx @tailwindcss/cli -i input.css -o output.css`
+Watch: `npx @tailwindcss/cli -i input.css -o output.css`
