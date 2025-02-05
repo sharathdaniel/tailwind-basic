@@ -5,7 +5,7 @@
   /* --color-*: initial; */ /* removes all the predefined colors */
 
   /* any css vars here will be generated as class */
-  --text-13px: 13px;
+  --text-xs-plus: 0.8125rem; /* 13px */
 }
 
 /* Set default properties for container class */
