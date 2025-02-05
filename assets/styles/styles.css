@@ -377,7 +377,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --text-13px: 13px;
+    --text-xs-plus: 0.8125rem;
   }
 }
 @layer base {
@@ -637,8 +637,8 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-13px {
-    font-size: var(--text-13px);
+  .text-xs-plus {
+    font-size: var(--text-xs-plus);
   }
   .text-black {
     color: var(--color-black);
