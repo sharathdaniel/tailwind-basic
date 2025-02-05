@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./components/buttons.css";
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -13,17 +14,3 @@
   margin-inline: auto;
   padding-inline: 2rem;
 } */
-
-@layer components {
-  .app-c-btn {
-    @apply rounded px-4 py-2 font-bold text-white transition-colors duration-200 ease-in not-disabled:cursor-pointer disabled:cursor-not-allowed;
-  }
-
-  .app-c-btn-primary {
-    @apply bg-blue-500 not-disabled:hover:bg-blue-700 disabled:bg-blue-300;
-  }
-
-  .app-c-btn-secondary {
-    @apply bg-green-500 not-disabled:hover:bg-green-700 disabled:bg-green-300;
-  }
-}
