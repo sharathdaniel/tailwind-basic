@@ -720,16 +720,16 @@
     transition-duration: 200ms;
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
-    &:not(:disabled) {
+    &:not(*:disabled) {
       cursor: pointer;
     }
     &:disabled {
       cursor: not-allowed;
     }
   }
-  .app-c-btn--primary {
+  .app-c-btn-primary {
     background-color: var(--color-blue-500);
-    &:not(:disabled) {
+    &:not(*:disabled) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-blue-700);
@@ -740,9 +740,9 @@
       background-color: var(--color-blue-300);
     }
   }
-  .app-c-btn--secondary {
+  .app-c-btn-secondary {
     background-color: var(--color-green-500);
-    &:not(:disabled) {
+    &:not(*:disabled) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-green-700);
