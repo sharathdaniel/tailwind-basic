@@ -723,21 +723,34 @@
     &:not(:disabled) {
       cursor: pointer;
     }
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
   .app-c-btn--primary {
     background-color: var(--color-blue-500);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-700);
+    &:not(:disabled) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-blue-700);
+        }
       }
+    }
+    &:disabled {
+      background-color: var(--color-blue-300);
     }
   }
   .app-c-btn--secondary {
     background-color: var(--color-green-500);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-green-700);
+    &:not(:disabled) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-green-700);
+        }
       }
+    }
+    &:disabled {
+      background-color: var(--color-green-300);
     }
   }
 }

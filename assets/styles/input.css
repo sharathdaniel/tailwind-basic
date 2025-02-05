@@ -21,11 +21,33 @@
     &:not(:disabled) {
       @apply cursor-pointer;
     }
+
+    &:disabled {
+      @apply cursor-not-allowed;
+    }
   }
+
   .app-c-btn--primary {
-    @apply bg-blue-500 hover:bg-blue-700;
+    @apply bg-blue-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-blue-700;
+    }
+
+    &:disabled {
+      @apply bg-blue-300;
+    }
   }
+  
   .app-c-btn--secondary {
-    @apply bg-green-500 hover:bg-green-700;
+    @apply bg-green-500;
+
+    &:not(:disabled) {
+      @apply hover:bg-green-700;
+    }
+
+    &:disabled {
+      @apply bg-green-300;
+    }
   }
 }
