@@ -22,7 +22,7 @@ jobs:
           cache: "yarn"
 
       - name: Install Dependencies
-        run: yarn add --frozen-lockfile=false
+        run: yarn
 
       - name: Commit and Push Changes
         run: |
