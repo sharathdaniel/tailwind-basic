@@ -15,20 +15,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: "yarn"
+          node-version: '21'  # Replace with your desired Node.js version
 
-      - name: Install Dependencies
-        run: yarn
+      - name: Install Yarn
+        run: npm install -g yarn
 
-      - name: Commit and Push Changes
+      - name: Run yarn install
+        run: yarn install
+
+      - name: Commit updated yarn.lock
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add yarn.lock
-          git commit -m "chore: update yarn.lock"
+          git commit -m "Update yarn.lock"
           git push
-        continue-on-error: true  # Prevent failure if there's nothing to commit
