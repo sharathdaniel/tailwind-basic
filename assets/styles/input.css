@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./components/buttons.css";
+
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -7,7 +7,17 @@
 
   /* any css vars here will be generated as class */
   --text-xs-plus: 0.8125rem; /* 13px */
+
+  --color-primary: var(--color-blue-500);
+  --color-primary-hover: var(--color-blue-700);
+  --color-primary-disabled: var(--color-blue-300);
+
+  --color-secondary: var(--color-green-500);
+  --color-secondary-hover: var(--color-green-700);
+  --color-secondary-disabled: var(--color-green-300);
 }
+
+@import "./components/buttons.css";
 
 /* Set default properties for container class */
 /* @utility container {

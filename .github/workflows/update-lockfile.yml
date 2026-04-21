@@ -2,14 +2,16 @@ name: Update Yarn Lockfile
 
 on:
   push:
-    paths:
-      - "package.json"
-  pull_request:
+    branches: [main]
     paths:
       - "package.json"
 
+permissions:
+  contents: write
+
 jobs:
   update-lockfile:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,10 +20,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '21'  # Replace with your desired Node.js version
+          node-version: '22'
+          cache: 'yarn'
 
-      - name: Install Yarn
-        run: npm install -g yarn
+      - name: Enable Corepack (uses packageManager from package.json)
+        run: corepack enable
 
       - name: Run yarn install
         run: yarn install
@@ -30,6 +33,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- yarn.lock; then
+            echo "yarn.lock already up to date"
+            exit 0
+          fi
           git add yarn.lock
           git commit -m "Update yarn.lock"
           git push

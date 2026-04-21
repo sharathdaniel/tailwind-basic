@@ -1,11 +1,7 @@
 {
   "printWidth": 120,
-  "tabWidth": 2,
-  "useTabs": false,
-  "bracketSpacing": true,
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "htmlWhitespaceSensitivity": "ignore",
-  "singleQuote": false,
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindStylesheet": "assets/styles/input.css"
 }

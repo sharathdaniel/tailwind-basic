@@ -1,6 +1,10 @@
 Tailwind Commands
 ==========================
 
-Install: `yarn add tailwindcss @tailwindcss/cli`
+Install: `yarn install`
 
-Watch: `npx @tailwindcss/cli -i assets/styles/input.css -o assets/styles/styles.css --watch`
+Dev (watch): `yarn dev`
+
+Build (minified): `yarn build`
+
+Format: `yarn format`

@@ -87,8 +87,8 @@
       const themeSwitch = document.querySelector(".switch-theme");
 
       themeSwitch.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.theme = isDark ? "dark" : "light";
       });
     </script>
   </body>

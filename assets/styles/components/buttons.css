@@ -1,13 +1,16 @@
 @layer components {
   .app-c-btn {
-    @apply rounded px-4 py-2 font-bold text-white transition-colors duration-200 ease-in not-disabled:cursor-pointer disabled:cursor-not-allowed;
+    @apply cursor-pointer rounded px-4 py-2 font-bold transition-colors duration-200 ease-in
+           disabled:cursor-not-allowed
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-gray-900 dark:focus-visible:outline-white;
   }
 
   .app-c-btn-primary {
-    @apply bg-blue-500 not-disabled:hover:bg-blue-700 disabled:bg-blue-300;
+    @apply bg-primary text-white not-disabled:hover:bg-primary-hover disabled:bg-primary-disabled;
   }
 
   .app-c-btn-secondary {
-    @apply bg-green-500 not-disabled:hover:bg-green-700 disabled:bg-green-300;
+    @apply bg-secondary text-white not-disabled:hover:bg-secondary-hover disabled:bg-secondary-disabled;
   }
 }
