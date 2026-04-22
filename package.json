@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "tailwindcss -i assets/styles/input.css -o assets/styles/styles.css --watch",
-    "build": "tailwindcss -i assets/styles/input.css -o assets/styles/styles.css --minify",
+    "dev": "tailwindcss -i assets/styles/main.css -o dist/styles.css --watch",
+    "build": "tailwindcss -i assets/styles/main.css -o dist/styles.css --minify",
     "format": "prettier --write ."
   },
   "devDependencies": {
